@@ -35,6 +35,8 @@ public class PlaneController : MonoBehaviour
     Rigidbody rb;
 
     [SerializeField] TextMeshProUGUI hud;
+
+    [SerializeField] Transform propella;
     
     private void Awake()
     {
@@ -63,7 +65,9 @@ public class PlaneController : MonoBehaviour
         updateHud();
 
         // エンジン音をスロットルに併せて大きくする
-        engineSound.volume = throttle * 0.01f; 
+        engineSound.volume = throttle * 0.01f;
+
+        propella.Rotate(Vector3.right * throttle);
     }
 
     // 一定時間ごとに呼ばれる
