@@ -18,6 +18,7 @@ public class EnemyManager : DesignPatterns.Singleton<EnemyManager>
             Debug.Log("hit enemy");
             GameObject explosion = Instantiate(explosionPrefab, collision.gameObject.transform.position,collision.gameObject.transform.rotation);
             explosion.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f); // ”š”­‚Ì‘å‚«‚³‚ð•Ï‚¦‚é
+            Destroy(collision.gameObject);
         }
     }
     void Start()
