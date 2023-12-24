@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DesignPatterns;
 using TMPro;
+using unityroom.Api;
 
 public class GameManager : DesignPatterns.Singleton<GameManager>
 {
@@ -80,6 +81,8 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
             endText.text = "配達成功！\n";
             endText.text += "クリアタイム: "+Timer.I.timeString + "\n\n";
             endText.text += "Press R to Restart";
+            // ボードNo1にスコア123.45fを送信する。
+            UnityroomApiClient.Instance.SendScore(1, Timer.I.timeElapsed, ScoreboardWriteMode.HighScoreAsc);
         }
     }
 }
