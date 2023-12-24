@@ -5,14 +5,17 @@ TagManager:
   serializedVersion: 2
   tags:
   - Water
+  - Laser
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - IgnoreLayer
   - 
   - 
   - 

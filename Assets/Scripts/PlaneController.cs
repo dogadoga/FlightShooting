@@ -15,6 +15,7 @@ public class PlaneController : MonoBehaviour
     [Tooltip("How much lift force this plane generates as it gains speed.")]
     public float lift = 135f; // スピードが上がると揚力が発生
 
+    private float planeMass = 400f;
     private float throttle;
     private float roll;
     private float pitch;
@@ -41,6 +42,7 @@ public class PlaneController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        rb.mass = planeMass;
         engineSound = GetComponent<AudioSource>();
 
     }

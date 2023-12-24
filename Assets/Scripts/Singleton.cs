@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace DesignPatterns.Singleton
+namespace DesignPatterns
 {
     public class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {

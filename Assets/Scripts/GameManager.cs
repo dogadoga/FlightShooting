@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DesignPatterns.Singleton;
+using DesignPatterns;
 
 namespace DogaGlobal
 {
 
-    public class GameManager : Singleton<GameManager>
+    public class GameManager : DesignPatterns.Singleton<GameManager>
     {
         // Start is called before the first frame update
         void Start()
