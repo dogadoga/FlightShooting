@@ -9,7 +9,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        RaycastHit hit;
+        //RaycastHit hit;
 
         //if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         //{

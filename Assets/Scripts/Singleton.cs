@@ -26,7 +26,7 @@ namespace DesignPatterns
             if (I==null)
             {
                 I = this as T;
-                I.Init();
+                //I.Init();
                 return;
             }
             if (DestroyTargetGameObject)
@@ -39,12 +39,12 @@ namespace DesignPatterns
             }
         }
 
-        /// <summary>
-        /// 派生クラス用のAwake
-        /// </summary>
-        protected virtual void Init()
-        {
-        }
+        ///// <summary>
+        ///// 派生クラス用のAwake
+        ///// </summary>
+        //protected virtual void Init()
+        //{
+        //}
 
         private void OnDestroy()
         {

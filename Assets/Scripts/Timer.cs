@@ -12,7 +12,7 @@ public class Timer : Singleton<Timer>
     // Start is called before the first frame update
     void Start()
     {
-        timeElapsed = 0f;
+        Init();
     }
 
     // Update is called once per frame
@@ -27,5 +27,13 @@ public class Timer : Singleton<Timer>
 
         timerText.text = timeString;
 
+    }
+
+    /// <summary>
+    /// èâä˙âª
+    /// </summary>
+    public void Init()
+    {
+        timeElapsed = 0f;
     }
 }

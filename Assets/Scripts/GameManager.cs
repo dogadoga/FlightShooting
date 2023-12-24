@@ -3,21 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using DesignPatterns;
 
-namespace DogaGlobal
+
+
+public class GameManager : DesignPatterns.Singleton<GameManager>
 {
-
-    public class GameManager : DesignPatterns.Singleton<GameManager>
+    public enum GameState
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
+        Start,
+        Prepare,
+        Play,
+        End
+    }
 
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
+    public GameState CurrentState { get; private set; }
+    private GameState AwakeState = GameState.Start;
+
+    public void SetState(GameState gameState)
+    {
+        CurrentState = gameState;
+
+    }
+
+    /// <summary>
+    /// ƒpƒ‰ƒ[ƒ^‚ğ‰Šú‰»
+    /// </summary>
+    public void InitiateAll()
+    {
+        EnemyManager.I.Init();
+        Timer.I.Init();
+        Init();
+
+    }
+
+    public void Init()
+    {
+        CurrentState = AwakeState;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        Init();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
     }
 }

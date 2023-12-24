@@ -23,7 +23,7 @@ public class EnemyManager : DesignPatterns.Singleton<EnemyManager>
     }
     void Start()
     {
-        EnemyLifeLeft = EnemyLife;
+        Init();
     }
     /// <summary>
     /// ’e‚ª“G‚É“–‚½‚Á‚½‚Æ‚«‚É”­“®
@@ -33,6 +33,14 @@ public class EnemyManager : DesignPatterns.Singleton<EnemyManager>
         Debug.Log("Hit");
         EnemyLifeLeft -= 5f;
         if (EnemyLifeLeft < 0) Debug.Log("Enemy Defeated");
+    }
+
+    /// <summary>
+    /// ‰Šú‰»
+    /// </summary>
+    public void Init()
+    {
+        EnemyLifeLeft = EnemyLife;
     }
 
     // Update is called once per frame

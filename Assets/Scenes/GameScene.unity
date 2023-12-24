@@ -15937,8 +15937,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "A,D : Roll \u2190\u2192\nW,S : Head \u2191\u2193\nQ,E : Yaw \u2190\u2192\nSpace
-    : Throttle Up\nLeft Control : Throttle Down"
+  m_text: "A,D : \u30ED\u30FC\u30EB \u2190\u2192\nW,S : \u6A5F\u9996 \u2191\u2193\nQ,E
+    : \u65CB\u56DE \u2190\u2192\nSpace : \u51FA\u529B\u4E0A\u3052\nLeft Control :
+    \u51FA\u529B\u4E0B\u3052"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6cc08851d43c6541ad73a060705380d, type: 2}
   m_sharedMaterial: {fileID: -6830890406297040117, guid: c6cc08851d43c6541ad73a060705380d, type: 2}
