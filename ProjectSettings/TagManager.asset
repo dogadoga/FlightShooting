@@ -8,6 +8,8 @@ TagManager:
   - Laser
   - Enemy
   - Bullet
+  - Goal
+  - Plane
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,7 @@ public class SceneTransition : Singleton<SceneTransition>
 
     public void LoadEndScene()
     {
-        LoadScene("End");
+        //LoadScene("End");
         GameManager.I.SetState(GameManager.GameState.End);
     }
 }

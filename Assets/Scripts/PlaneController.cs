@@ -63,6 +63,7 @@ public class PlaneController : MonoBehaviour
 
     private void Update()
     {
+        if (GameManager.I.CurrentState == GameManager.GameState.Play)
         HandleInputs();
         updateHud();
 

@@ -17,6 +17,10 @@ public class CameraController : MonoBehaviour
     private int index = 1;
     private Vector3 target;
 
+    private void Awake()
+    {
+        transform.position = povs[index].position;
+    }
     private void Update()
     {
         // Numbers 1-4 represent different povs (you can add more)
