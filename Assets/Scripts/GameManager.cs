@@ -83,7 +83,7 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
         if (isPlayerDefeated)
         {
             endText.text = "配達失敗！\n\n";
-            endText.text += "Press R to Restart";
+            //endText.text += "Press R to Restart";
             UnityroomApiClient.Instance.SendScore(1, 9999f, ScoreboardWriteMode.HighScoreAsc);
         }
         else
@@ -91,7 +91,7 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
             ClearAS.Play();
             endText.text = "配達成功！\n";
             endText.text += "クリアタイム: "+Timer.I.timeString + "\n\n";
-            endText.text += "Press R to Restart";
+            //endText.text += "Press R to Restart";
             // ボードNo1にスコア123.45fを送信する。
             UnityroomApiClient.Instance.SendScore(1, Timer.I.timeElapsed, ScoreboardWriteMode.HighScoreAsc);
         }
