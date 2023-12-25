@@ -171,11 +171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -753,6 +753,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef170c42d18bdc408fe80e24f3dbe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnemyDefeated: 0
+  isPlayerDefeated: 0
+  isEnded: 0
+  endPanel: {fileID: 0}
+  endText: {fileID: 0}
 --- !u!114 &1175571940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1141,6 +1146,7 @@ GameObject:
   - component: {fileID: 1641385101}
   - component: {fileID: 1641385103}
   - component: {fileID: 1641385102}
+  - component: {fileID: 1641385104}
   m_Layer: 5
   m_Name: Version
   m_TagString: Untagged
@@ -1188,7 +1194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: v1.0.0
+  m_text: vx.y.z
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c6cc08851d43c6541ad73a060705380d, type: 2}
   m_sharedMaterial: {fileID: -6830890406297040117, guid: c6cc08851d43c6541ad73a060705380d, type: 2}
@@ -1265,6 +1271,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641385100}
   m_CullTransparentMesh: 1
+--- !u!114 &1641385104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641385100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afded2bdeac9cae4a82dfa514106009f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &193253573336396271
 Transform:
   m_ObjectHideFlags: 0
