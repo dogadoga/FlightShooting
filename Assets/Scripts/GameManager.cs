@@ -75,6 +75,7 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
         {
             endText.text = "îzíBé∏îsÅI\n\n";
             endText.text += "Press R to Restart";
+            UnityroomApiClient.Instance.SendScore(1, 9999f, ScoreboardWriteMode.HighScoreAsc);
         }
         else
         {
