@@ -64,11 +64,18 @@ public class PlaneController : MonoBehaviour
     private void Update()
     {
         if (GameManager.I.CurrentState == GameManager.GameState.Play)
-        HandleInputs();
+        {
+            HandleInputs();
+            // エンジン音をスロットルに併せて大きくする
+            engineSound.volume = throttle * 0.01f;
+
+        }
+        else
+        {
+            engineSound.volume = 0f;
+        }
         updateHud();
 
-        // エンジン音をスロットルに併せて大きくする
-        engineSound.volume = throttle * 0.01f;
 
         propella.Rotate(Vector3.right * throttle);
     }
