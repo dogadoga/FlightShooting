@@ -22,6 +22,8 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
     public bool isEnded = false;
     public GameObject endPanel;
     public TextMeshProUGUI endText;
+    public AudioSource EndingAS;
+    public AudioClip endingTheme;
 
 
     public void Init()
@@ -70,7 +72,13 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
     public void EndGame()
     {
         SceneTransition.I.LoadEndScene();
+        // エンディングテーマ
+        EndingAS.clip = endingTheme;
+        EndingAS.Play();
+
         endPanel.SetActive(true);
+
+
         if (isPlayerDefeated)
         {
             endText.text = "配達失敗！\n\n";
