@@ -9,16 +9,20 @@ public class Goal : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Plane")&& GameManager.I.isEnemyDefeated)
+        if (collision.gameObject.CompareTag("Plane"))
         {
-            GameManager.I.EndGame();
+            if (collision.gameObject.CompareTag("Plane") && GameManager.I.isEnemyDefeated)
+            {
+                GameManager.I.EndGame();
+            }
+            else
+            {
+                Instantiate(explosionPrefab, plane.transform.position, plane.transform.rotation);
+                explosionPrefab.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+                GameManager.I.isPlayerDefeated = true;
+                GameManager.I.EndGame();
+            }
         }
-        else
-        {
-            Instantiate(explosionPrefab, plane.transform.position, plane.transform.rotation);
-            explosionPrefab.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
-            GameManager.I.isPlayerDefeated = true;
-            GameManager.I.EndGame();
-        }
+        
     }
 }
