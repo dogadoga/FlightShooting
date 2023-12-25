@@ -748,9 +748,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b616e4f87680f3645aa3cac098f95ec9, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_audioClip: {fileID: 8300000, guid: f82ad761d98e98b4cb1ba003856dbc32, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -16880,6 +16880,8 @@ MonoBehaviour:
   endPanel: {fileID: 1715573834}
   endText: {fileID: 699002311}
   EndingAS: {fileID: 437251168}
+  ClearAS: {fileID: 511725191}
+  endingTheme: {fileID: 8300000, guid: b616e4f87680f3645aa3cac098f95ec9, type: 3}
 --- !u!114 &1701965570
 MonoBehaviour:
   m_ObjectHideFlags: 0

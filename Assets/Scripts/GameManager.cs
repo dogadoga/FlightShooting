@@ -23,6 +23,7 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
     public GameObject endPanel;
     public TextMeshProUGUI endText;
     public AudioSource EndingAS;
+    public AudioSource ClearAS;
     public AudioClip endingTheme;
 
 
@@ -87,6 +88,7 @@ public class GameManager : DesignPatterns.Singleton<GameManager>
         }
         else
         {
+            ClearAS.Play();
             endText.text = "配達成功！\n";
             endText.text += "クリアタイム: "+Timer.I.timeString + "\n\n";
             endText.text += "Press R to Restart";
